@@ -27,6 +27,12 @@ node('node') {
 
     try {
 
+	stage('Git Clone'){
+
+          sh 'git clone https://github.com/githublab-ph/lab-devops.git'
+          sh 'cd lab-devops'
+       }
+
        stage('Checkout'){
 
           checkout scm
