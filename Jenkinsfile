@@ -33,6 +33,24 @@ node('node') {
           sh 'cd lab-devops'
        }
 
+	stage('Build Node App'){
+	sh 'npm install'
+        sh 'npm run build'
+        sh 'cd build'
+       }
+
+       stage('Start Application'){
+
+            sh 'npm start'
+       }
+
+       stage('Deploy'){
+	sh 'pwd'
+	sh 'ls'
+
+        }
+
+
        stage('Checkout'){
 
           checkout scm
