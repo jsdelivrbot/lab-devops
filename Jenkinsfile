@@ -28,10 +28,12 @@ node('node') {
     try {
 	
 	stage('Git Clone'){
-	  sh 'rm -rf lab-devops'
-          sh 'git clone https://github.com/githublab-ph/lab-devops.git'
-          sh 'cd /var/lib/jenkins/workspace/teste-node-js/lab-devops'
-	  sh 'echo $PWD'
+	sh 'rm -rf lab-devops'
+        sh 'git clone https://github.com/githublab-ph/lab-devops.git'
+        sh 'ls -la'
+	sh 'cd /var/lib/jenkins/workspace/teste-node-js/lab-devops'
+	sh 'ls -la'  
+	sh 'echo $PWD'
 	 }
 
 	stage('Build Node App'){
