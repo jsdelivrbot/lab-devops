@@ -31,7 +31,7 @@ node('node') {
 	sh 'rm -rf lab-devops'
         sh 'git clone https://github.com/githublab-ph/lab-devops.git'
         sh 'ls -la'
-	sh 'cp -r -v lab-devops .'
+	sh 'cp -r -v lab-devops/* .'
 	sh 'ls -la'  
 	sh 'echo $PWD'
 	 }
