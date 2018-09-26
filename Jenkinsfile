@@ -15,7 +15,7 @@ pipeline {
 
        stage('Git Clone'){
 
-          git clone https://github.com/githublab-ph/lab-devops.git
+          sh 'git clone https://github.com/githublab-ph/lab-devops.git'
           sh 'cd lab-devops'
        }
 
