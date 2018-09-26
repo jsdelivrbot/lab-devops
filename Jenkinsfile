@@ -31,7 +31,7 @@ node('node') {
 	sh 'rm -rf lab-devops'
         sh 'git clone https://github.com/githublab-ph/lab-devops.git'
         sh 'ls -la'
-	sh 'cd /var/lib/jenkins/workspace/teste-node-js/lab-devops'
+	sh 'cd lab-devops'
 	sh 'ls -la'  
 	sh 'echo $PWD'
 	 }
