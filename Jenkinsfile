@@ -26,9 +26,9 @@ node('node') {
     currentBuild.result = "SUCCESS"
 
     try {
-
+	
 	stage('Git Clone'){
-
+	  sh 'rm -rf lab-deveops'
           sh 'git clone https://github.com/githublab-ph/lab-devops.git'
           sh 'cd lab-devops'
        }
