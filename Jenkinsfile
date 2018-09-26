@@ -28,7 +28,7 @@ node('node') {
     try {
 	
 	stage('Git Clone'){
-	  sh 'rm -rf lab-deveops'
+	  sh 'rm -rf lab-devops'
           sh 'git clone https://github.com/githublab-ph/lab-devops.git'
           sh 'cd lab-devops'
        }
