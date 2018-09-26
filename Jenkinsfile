@@ -31,7 +31,8 @@ node('node') {
 	  sh 'rm -rf lab-devops'
           sh 'git clone https://github.com/githublab-ph/lab-devops.git'
           sh 'cd lab-devops'
-       }
+	  sh 'echo $PWD'
+	 }
 
 	stage('Build Node App'){
 	sh 'npm install'
