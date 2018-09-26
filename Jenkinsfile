@@ -1,14 +1,5 @@
 #!groovy
 
-pipeline {
-	agent{
-		node {
-		    label 'node' 
- 			}
-		}
-	}
-
-
 stages{
        stage('Git Clone'){
 
