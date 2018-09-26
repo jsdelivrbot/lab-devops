@@ -9,10 +9,7 @@ pipeline {
 	}
 
 
-    currentBuild.result = "SUCCESS"
-
-    try {
-
+stages{
        stage('Git Clone'){
 
           sh 'git clone https://github.com/githublab-ph/lab-devops.git'
@@ -37,16 +34,5 @@ pipeline {
         }
             
     }
-
-  catch (err) {
-	  currentBuild.result = "FAILURE"
-
-            mail body: "project build error is here: ${env.BUILD_URL}" ,
-            from: 'paulo.souza@dextra-sw.com',
-            to: 'paulo.souza@dextra-sw.com',
-            subject: 'project build failed',
-
-        throw err
-	}
 
 
