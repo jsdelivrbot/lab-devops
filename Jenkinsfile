@@ -31,18 +31,11 @@ pipeline {
        }
 
        stage('Deploy'){
+	sh 'pwd'
+	sh 'ls'
 
         }
-    catch (err) {
-
-        currentBuild.result = "FAILURE"
-
-            mail body: "project build error is here: ${env.BUILD_URL}" ,
-            from: 'hspaulo@gmail.com',
-            to: 'paulo.souza@dextra-sw.com',
-            subject: 'project build failed',
             
-        throw err
     }
 
 }
